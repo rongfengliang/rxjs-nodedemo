@@ -4,4 +4,4 @@ WORKDIR /home/nodejs/app
 COPY . /home/nodejs/app
 EXPOSE 8080
 RUN yarn 
-CMD ["yarn","run","start:build"]
+CMD ["yarn","run","start-build"]
