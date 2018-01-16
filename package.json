@@ -15,6 +15,7 @@
   "scripts": {
     "start": "live-server",
     "build": "browserify app.js  -t [ babelify --presets [ env ] ]  -o index.js",
-    "node": "node app"
+    "node": "node app",
+    "start:build":"yarn build && yarn start"
   }
 }
