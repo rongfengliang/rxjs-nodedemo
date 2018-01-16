@@ -21,8 +21,10 @@ var Recived = function Recived(observable) {
     _classCallCheck(this, Recived);
 
     console.dir(observable);
-    var subscription = observable.subscribe(function (price) {
-        return console.log("the result is: " + price);
+    var subscription = observable.subscribe(function (result) {
+        console.log("the result is: " + result);
+        var dataDom = document.querySelector("#result");
+        dataDom.innerHTML = result;
     }, function (err) {
         return console.log("Something went wrong: " + err.message);
     });

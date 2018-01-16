@@ -13,7 +13,11 @@ class Recived {
         console.dir(observable);
         const subscription = observable
             .subscribe(
-            price => console.log(`the result is: ${price}`),
+            result => {
+                 console.log(`the result is: ${result}`)
+                let dataDom =document.querySelector("#result");
+                dataDom.innerHTML=result;
+             },
             err => console.log(`Something went wrong: ${err.message}`)
             );
     }
